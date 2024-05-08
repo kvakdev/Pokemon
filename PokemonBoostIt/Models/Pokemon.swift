@@ -10,4 +10,6 @@ import Foundation
 struct Pokemon: Equatable {
     let name: String
     let url: URL
+    let imageUrl: URL
+    let index: Int
 }

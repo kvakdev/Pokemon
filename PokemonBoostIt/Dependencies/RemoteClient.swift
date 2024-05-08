@@ -30,8 +30,8 @@ class RemoteClient: DependencyKey {
         var client = RemoteClient()
         client.getPokemons = {
             [
-                Pokemon(name: "ivysaur", url: URL(string: "https://pokeapi.co/api/v2/pokemon/2/")!),
-                Pokemon(name: "venusaur", url: URL(string: "https://pokeapi.co/api/v2/pokemon/3/")!)
+                Pokemon(name: "ivysaur", url: URL(string: "https://pokeapi.co/api/v2/pokemon/2/")!, imageUrl: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png")!, index: 2),
+                Pokemon(name: "venusaur", url: URL(string: "https://pokeapi.co/api/v2/pokemon/3/")!, imageUrl: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png")!, index: 3)
             ]
         }
         
@@ -42,14 +42,19 @@ class RemoteClient: DependencyKey {
         self.getPokemons = getPokemons
     }
     
-    func fetchPokemons() async throws -> [Pokemon] {
+    func fetchPokemons(offset: Int? = 0) async throws -> [Pokemon] {
         if let pokemons = getPokemons?() { return pokemons }
-        let url = URL(string: "https://pokeapi.co/api/v2/pokemon?limit=10")!
+        let url = URL(string: "https://pokeapi.co/api/v2/pokemon?limit=10&offset=\(offset ?? 0)")!
         
         let data = try await URLSession.shared.data(from: url)
         let mapped = try JSONDecoder().decode(PokemonResponse.self, from: data.0)
         
-        return mapped.results.map { Pokemon(name: $0.name, url: $0.url) }
+        return mapped.results.map { remotePokemon in
+            let index = Int(remotePokemon.url.lastPathComponent)!
+            let imageUrl = URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/\(index).png")!
+            
+            return Pokemon(name: remotePokemon.name, url: remotePokemon.url, imageUrl: imageUrl, index: index )
+        }
     }
 }
 

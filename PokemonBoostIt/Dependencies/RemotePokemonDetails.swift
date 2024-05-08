@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - PokemonDetails
-struct PokemonDetails: Codable {
+struct RemotePokemonDetails: Codable {
     let abilities: [Ability]
     let baseExperience: JSONNull?
     let cries: Cries

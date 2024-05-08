@@ -17,7 +17,9 @@
 		CEEFCD372BEB8FF40072E6BF /* PokemonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFCD362BEB8FF40072E6BF /* PokemonListView.swift */; };
 		CEEFCD3A2BEB97760072E6BF /* RemoteClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFCD392BEB97760072E6BF /* RemoteClient.swift */; };
 		CEEFCD3D2BEB97D90072E6BF /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFCD3C2BEB97D80072E6BF /* Pokemon.swift */; };
-		CEEFCD3F2BEBAA660072E6BF /* PokemonDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFCD3E2BEBAA660072E6BF /* PokemonDetails.swift */; };
+		CEEFCD412BEBABAC0072E6BF /* PokemonDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFCD402BEBABAC0072E6BF /* PokemonDetailsView.swift */; };
+		CEEFCD432BEBAC2A0072E6BF /* RemotePokemonDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFCD422BEBAC2A0072E6BF /* RemotePokemonDetails.swift */; };
+		CEEFCD452BEBAC820072E6BF /* PokemonDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFCD442BEBAC820072E6BF /* PokemonDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +52,9 @@
 		CEEFCD362BEB8FF40072E6BF /* PokemonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListView.swift; sourceTree = "<group>"; };
 		CEEFCD392BEB97760072E6BF /* RemoteClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteClient.swift; sourceTree = "<group>"; };
 		CEEFCD3C2BEB97D80072E6BF /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
-		CEEFCD3E2BEBAA660072E6BF /* PokemonDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetails.swift; sourceTree = "<group>"; };
+		CEEFCD402BEBABAC0072E6BF /* PokemonDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailsView.swift; sourceTree = "<group>"; };
+		CEEFCD422BEBAC2A0072E6BF /* RemotePokemonDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemotePokemonDetails.swift; sourceTree = "<group>"; };
+		CEEFCD442BEBAC820072E6BF /* PokemonDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 			children = (
 				CEEFCD092BEB8F430072E6BF /* PokemonBoostItApp.swift */,
 				CEEFCD362BEB8FF40072E6BF /* PokemonListView.swift */,
+				CEEFCD402BEBABAC0072E6BF /* PokemonDetailsView.swift */,
 				CEEFCD3B2BEB97D00072E6BF /* Models */,
 				CEEFCD382BEB976B0072E6BF /* Dependencies */,
 				CEEFCD0D2BEB8F470072E6BF /* Assets.xcassets */,
@@ -141,7 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				CEEFCD392BEB97760072E6BF /* RemoteClient.swift */,
-				CEEFCD3E2BEBAA660072E6BF /* PokemonDetails.swift */,
+				CEEFCD422BEBAC2A0072E6BF /* RemotePokemonDetails.swift */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				CEEFCD3C2BEB97D80072E6BF /* Pokemon.swift */,
+				CEEFCD442BEBAC820072E6BF /* PokemonDetails.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -290,11 +296,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEEFCD452BEBAC820072E6BF /* PokemonDetails.swift in Sources */,
 				CEEFCD372BEB8FF40072E6BF /* PokemonListView.swift in Sources */,
+				CEEFCD412BEBABAC0072E6BF /* PokemonDetailsView.swift in Sources */,
 				CEEFCD3D2BEB97D90072E6BF /* Pokemon.swift in Sources */,
 				CEEFCD3A2BEB97760072E6BF /* RemoteClient.swift in Sources */,
+				CEEFCD432BEBAC2A0072E6BF /* RemotePokemonDetails.swift in Sources */,
 				CEEFCD0A2BEB8F430072E6BF /* PokemonBoostItApp.swift in Sources */,
-				CEEFCD3F2BEBAA660072E6BF /* PokemonDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
