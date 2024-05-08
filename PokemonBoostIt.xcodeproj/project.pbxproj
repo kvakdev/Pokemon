@@ -15,6 +15,8 @@
 		CEEFCD272BEB8F480072E6BF /* PokemonBoostItUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFCD262BEB8F480072E6BF /* PokemonBoostItUITestsLaunchTests.swift */; };
 		CEEFCD352BEB8FAE0072E6BF /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = CEEFCD342BEB8FAE0072E6BF /* ComposableArchitecture */; };
 		CEEFCD372BEB8FF40072E6BF /* PokemonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFCD362BEB8FF40072E6BF /* PokemonListView.swift */; };
+		CEEFCD3A2BEB97760072E6BF /* RemoteClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFCD392BEB97760072E6BF /* RemoteClient.swift */; };
+		CEEFCD3D2BEB97D90072E6BF /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFCD3C2BEB97D80072E6BF /* Pokemon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		CEEFCD242BEB8F480072E6BF /* PokemonBoostItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonBoostItUITests.swift; sourceTree = "<group>"; };
 		CEEFCD262BEB8F480072E6BF /* PokemonBoostItUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonBoostItUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CEEFCD362BEB8FF40072E6BF /* PokemonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListView.swift; sourceTree = "<group>"; };
+		CEEFCD392BEB97760072E6BF /* RemoteClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteClient.swift; sourceTree = "<group>"; };
+		CEEFCD3C2BEB97D80072E6BF /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 			children = (
 				CEEFCD092BEB8F430072E6BF /* PokemonBoostItApp.swift */,
 				CEEFCD362BEB8FF40072E6BF /* PokemonListView.swift */,
+				CEEFCD3B2BEB97D00072E6BF /* Models */,
+				CEEFCD382BEB976B0072E6BF /* Dependencies */,
 				CEEFCD0D2BEB8F470072E6BF /* Assets.xcassets */,
 				CEEFCD0F2BEB8F470072E6BF /* Preview Content */,
 			);
@@ -127,6 +133,22 @@
 				CEEFCD262BEB8F480072E6BF /* PokemonBoostItUITestsLaunchTests.swift */,
 			);
 			path = PokemonBoostItUITests;
+			sourceTree = "<group>";
+		};
+		CEEFCD382BEB976B0072E6BF /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				CEEFCD392BEB97760072E6BF /* RemoteClient.swift */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		CEEFCD3B2BEB97D00072E6BF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CEEFCD3C2BEB97D80072E6BF /* Pokemon.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +288,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEEFCD372BEB8FF40072E6BF /* PokemonListView.swift in Sources */,
+				CEEFCD3D2BEB97D90072E6BF /* Pokemon.swift in Sources */,
+				CEEFCD3A2BEB97760072E6BF /* RemoteClient.swift in Sources */,
 				CEEFCD0A2BEB8F430072E6BF /* PokemonBoostItApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct PokemonBoostItApp: App {
+    @State var store = Store(initialState: PokemonListFeature.State.init(), reducer: { PokemonListFeature() })
+    
     var body: some Scene {
         WindowGroup {
-            PokemonListView()
+            PokemonListView(store: store)
         }
     }
 }
