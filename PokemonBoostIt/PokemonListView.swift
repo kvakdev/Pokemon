@@ -52,8 +52,6 @@ struct PokemonListFeature: Reducer {
                 
                 return .none
             }
-            
-            return .none
         }
     }
 }
@@ -64,18 +62,19 @@ struct PokemonListView: View {
     
     var body: some View {
         List {
-//            if !store.error.isEmpty {
-//                Text(store.error)
-//                    .bold()
-//                    .foregroundStyle(.red)
-//            }
-//            
+            if !store.error.isEmpty {
+                Text(store.error)
+                    .bold()
+                    .foregroundStyle(.red)
+            }
+            
             ForEach(store.models, id: \.self.name) { item in
                 Text(item.name)
                     .onTapGesture {
                         store.send(.itemTapped(item))
                     }
             }
+            
         }
         .onAppear(perform: {
             store.send(.onAppear)
