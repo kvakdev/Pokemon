@@ -85,31 +85,23 @@ struct PokemonListView: View {
             
             ForEach(store.models, id: \.self.name) { item in
                 HStack {
-                    AsyncImage(url: item.imageUrl) { phase in
-                        switch phase {
-                        case .empty:
-                            Image(systemName: "trash")
-                        case .success(let image):
-                            image.resizable()
-                        case .failure(let error):
-                            Image(systemName: "trash")
-                        @unknown default:
-                            Image(systemName: "trash")
-                        }
-                    }
-                    .scaledToFit()
-                    .frame(maxWidth: 100, maxHeight: 100)
+                    AsyncRefreshableImageView(url: item.imageUrl)
                     
-                    Text(item.name)
-                        .onTapGesture {
-                            store.send(.itemTapped(item))
-                    }
+                    Text(item.name.capitalized)
+                        .font(.largeTitle)
+                   
+                    Spacer()
                 }
+                .frame(height: 100)
+                .frame(maxWidth: .infinity, alignment: .leading)
                 .onAppear(perform: {
                     store.send(.onAppearOf(item))
                 })
+                .onTapGesture {
+                    store.send(.itemTapped(item))
+                }
             }
-            
+            .listRowSeparator(.hidden)
         }
         .onAppear(perform: {
             store.send(.onAppear)
@@ -121,4 +113,49 @@ struct PokemonListView: View {
     PokemonListView(store: Store(initialState: .init(), reducer: {
         PokemonListFeature()
     }))
+}
+
+struct AsyncRefreshableImageView: View {
+    let url: URL
+    @State var id = UUID()
+    @State var isRetryDisabled = false
+    
+    var body: some View {
+        ZStack {
+            AsyncImage(url: url) { phase in
+                switch phase {
+                case .empty:
+                    ProgressView()
+                        .onAppear(perform: {
+                            self.isRetryDisabled = false
+                        })
+                case .success(let image):
+                    image.resizable()
+                        .onAppear(perform: {
+                            self.isRetryDisabled = true
+                        })
+                case .failure(let error):
+                    Image(systemName: "arrow.uturn.left.circle")
+                        .onAppear(perform: {
+                            self.isRetryDisabled = false
+                        })
+                @unknown default:
+                    Image(systemName: "trash")
+                        .onAppear(perform: {
+                            self.isRetryDisabled = false
+                        })
+                }
+            }
+            .frame(width: 100, height: 100)
+            .id(id)
+            
+            Button(action: {
+                self.id = UUID()
+            }, label: {
+                Color.black.opacity(0.001)
+            })
+            .frame(width: 100, height: 100)
+            .disabled(isRetryDisabled)
+        }
+    }
 }
