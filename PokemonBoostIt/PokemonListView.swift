@@ -16,7 +16,7 @@ struct PokemonListFeature: Reducer {
     @ObservableState
     struct State {
         var models: [Item] = []
-        var error: String = ""
+        var error: String?
     }
     
     enum Action: Equatable {
@@ -25,6 +25,12 @@ struct PokemonListFeature: Reducer {
         case itemsLoaded([Item])
         case displayError(String)
         case onAppearOf(Item)
+        case loadAfter(Item?)
+        case retryLastLoad
+    }
+    
+    enum Constants {
+        static let totalNumberOfItems = 1302
     }
     
     var body: some Reducer<State, Action> {
@@ -36,35 +42,36 @@ struct PokemonListFeature: Reducer {
                 //show details
                 return .none
             case .onAppear:
-                return .run { send in
-                    do {
-                        let items = try await remoteClient.fetchPokemons()
-                        await send(.itemsLoaded(items))
-                    } catch {
-                        debugPrint("some error \(error)")
-                    }
-                }
+                return .send(.loadAfter(nil))
+                
             case .itemsLoaded(let newItems):
                 state.models.append(contentsOf: newItems)
+                state.error = nil
                 
                 return .none
+                
             case .displayError(let error):
                 state.error = error
                 
                 return .none
             case .onAppearOf(let item):
-                guard item == state.models.last else {
-                    return .none
-                }
+                let shouldLoad = state.error == nil && state.models.count < Constants.totalNumberOfItems && item == state.models.last
                 
-                return .run { [offset = state.models.last?.index] send in
+                guard shouldLoad else { return .none }
+                
+                return .send(.loadAfter(item))
+                
+            case .retryLastLoad:
+                return .send(.loadAfter(state.models.last))
+                
+            case .loadAfter(let item):
+                return .run { [offset = item?.index ?? 0] send in
                     do {
                         let newItems = try await remoteClient.fetchPokemons(offset: offset)
                         await send(.itemsLoaded(newItems))
                     } catch {
-                        await send(.displayError("Fetch failed"))
+                        await send(.displayError("Load failed please tap to try again"))
                     }
-                    
                 }
             }
         }
@@ -77,12 +84,6 @@ struct PokemonListView: View {
     
     var body: some View {
         List {
-            if !store.error.isEmpty {
-                Text(store.error)
-                    .bold()
-                    .foregroundStyle(.red)
-            }
-            
             ForEach(store.models, id: \.self.name) { item in
                 HStack {
                     AsyncRefreshableImageView(url: item.imageUrl)
@@ -102,6 +103,16 @@ struct PokemonListView: View {
                 }
             }
             .listRowSeparator(.hidden)
+            
+            if let error = store.error {
+                Button(action: {
+                    store.send(.retryLastLoad)
+                }, label: {
+                    Text(error)
+                        .bold()
+                        .foregroundStyle(.red)
+                })
+            }
         }
         .onAppear(perform: {
             store.send(.onAppear)
@@ -126,9 +137,6 @@ struct AsyncRefreshableImageView: View {
                 switch phase {
                 case .empty:
                     ProgressView()
-                        .onAppear(perform: {
-                            self.isRetryDisabled = false
-                        })
                 case .success(let image):
                     image.resizable()
                         .onAppear(perform: {
@@ -137,25 +145,17 @@ struct AsyncRefreshableImageView: View {
                 case .failure(let error):
                     Image(systemName: "arrow.uturn.left.circle")
                         .onAppear(perform: {
-                            self.isRetryDisabled = false
+                            self.id = UUID()
                         })
                 @unknown default:
                     Image(systemName: "trash")
                         .onAppear(perform: {
-                            self.isRetryDisabled = false
+                            self.id = UUID()
                         })
                 }
             }
             .frame(width: 100, height: 100)
             .id(id)
-            
-            Button(action: {
-                self.id = UUID()
-            }, label: {
-                Color.black.opacity(0.001)
-            })
-            .frame(width: 100, height: 100)
-            .disabled(isRetryDisabled)
         }
     }
 }
