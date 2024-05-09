@@ -20,6 +20,7 @@
 		CEEFCD412BEBABAC0072E6BF /* PokemonDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFCD402BEBABAC0072E6BF /* PokemonDetailsView.swift */; };
 		CEEFCD432BEBAC2A0072E6BF /* RemotePokemonDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFCD422BEBAC2A0072E6BF /* RemotePokemonDetails.swift */; };
 		CEEFCD452BEBAC820072E6BF /* PokemonDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFCD442BEBAC820072E6BF /* PokemonDetails.swift */; };
+		CEEFCD472BECE54E0072E6BF /* Pokemon+SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFCD462BECE54E0072E6BF /* Pokemon+SampleData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		CEEFCD402BEBABAC0072E6BF /* PokemonDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailsView.swift; sourceTree = "<group>"; };
 		CEEFCD422BEBAC2A0072E6BF /* RemotePokemonDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemotePokemonDetails.swift; sourceTree = "<group>"; };
 		CEEFCD442BEBAC820072E6BF /* PokemonDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetails.swift; sourceTree = "<group>"; };
+		CEEFCD462BECE54E0072E6BF /* Pokemon+SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pokemon+SampleData.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				CEEFCD3C2BEB97D80072E6BF /* Pokemon.swift */,
+				CEEFCD462BECE54E0072E6BF /* Pokemon+SampleData.swift */,
 				CEEFCD442BEBAC820072E6BF /* PokemonDetails.swift */,
 			);
 			path = Models;
@@ -299,6 +302,7 @@
 				CEEFCD452BEBAC820072E6BF /* PokemonDetails.swift in Sources */,
 				CEEFCD372BEB8FF40072E6BF /* PokemonListView.swift in Sources */,
 				CEEFCD412BEBABAC0072E6BF /* PokemonDetailsView.swift in Sources */,
+				CEEFCD472BECE54E0072E6BF /* Pokemon+SampleData.swift in Sources */,
 				CEEFCD3D2BEB97D90072E6BF /* Pokemon.swift in Sources */,
 				CEEFCD3A2BEB97760072E6BF /* RemoteClient.swift in Sources */,
 				CEEFCD432BEBAC2A0072E6BF /* RemotePokemonDetails.swift in Sources */,

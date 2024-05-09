@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct PokemonDetails {
+struct PokemonDetails: Equatable, Hashable {
     
 }

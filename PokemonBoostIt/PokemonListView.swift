@@ -8,8 +8,8 @@
 import SwiftUI
 import ComposableArchitecture
 
-
-struct PokemonListFeature: Reducer {
+@Reducer
+struct PokemonListFeature {
     @Dependency(\.remoteClient) var remoteClient
     typealias Item = Pokemon
     
@@ -17,6 +17,8 @@ struct PokemonListFeature: Reducer {
     struct State {
         var models: [Item] = []
         var error: String?
+        
+        var path = StackState<Path.State>()
     }
     
     enum Action: Equatable {
@@ -27,10 +29,16 @@ struct PokemonListFeature: Reducer {
         case onAppearOf(Item)
         case loadAfter(Item?)
         case retryLastLoad
+        case path(StackActionOf<Path>)
     }
     
     enum Constants {
         static let totalNumberOfItems = 1302
+    }
+    
+    @Reducer(state: .equatable, action: .equatable)
+    enum Path {
+        case details(PokemonDetailsFeature)
     }
     
     var body: some Reducer<State, Action> {
@@ -38,8 +46,8 @@ struct PokemonListFeature: Reducer {
             
             switch action {
             case .itemTapped(let item):
-                debugPrint("item tapped: \(item.name)")
                 //show details
+                state.path.append(.details(PokemonDetailsFeature.State(details: PokemonDetails(), pokemon: item)))
                 return .none
             case .onAppear:
                 return .send(.loadAfter(nil))
@@ -73,50 +81,47 @@ struct PokemonListFeature: Reducer {
                         await send(.displayError("Load failed please tap to try again"))
                     }
                 }
+            case .path(_):
+                return .none
             }
         }
+        .forEach(\.path, action: \.path)
     }
 }
 
 
 struct PokemonListView: View {
-    var store: StoreOf<PokemonListFeature>
+    @Bindable var store: StoreOf<PokemonListFeature>
     
     var body: some View {
-        List {
-            ForEach(store.models, id: \.self.name) { item in
-                HStack {
-                    AsyncRefreshableImageView(url: item.imageUrl)
-                    
-                    Text(item.name.capitalized)
-                        .font(.largeTitle)
-                   
-                    Spacer()
+        NavigationStack(path: $store.scope(state: \.path, action: \.path)) {
+            List {
+                ForEach(store.models, id: \.self.name) { item in
+                    PokemonRow(item: item, store: store)
                 }
-                .frame(height: 100)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .onAppear(perform: {
-                    store.send(.onAppearOf(item))
-                })
-                .onTapGesture {
-                    store.send(.itemTapped(item))
+                .listRowSeparator(.hidden)
+                
+                if let error = store.error {
+                    Button(action: {
+                        store.send(.retryLastLoad)
+                    }, label: {
+                        Text(error)
+                            .bold()
+                            .foregroundStyle(.red)
+                    })
                 }
             }
-            .listRowSeparator(.hidden)
-            
-            if let error = store.error {
-                Button(action: {
-                    store.send(.retryLastLoad)
-                }, label: {
-                    Text(error)
-                        .bold()
-                        .foregroundStyle(.red)
-                })
+            .onAppear(perform: {
+                store.send(.onAppear)
+            })
+        } destination: { store in
+            switch store.case {
+            case .details(let store):
+                PokemonDetailsView(store: store)
             }
         }
-        .onAppear(perform: {
-            store.send(.onAppear)
-        })
+
+        
     }
 }
 
@@ -156,6 +161,30 @@ struct AsyncRefreshableImageView: View {
             }
             .frame(width: 100, height: 100)
             .id(id)
+        }
+    }
+}
+
+struct PokemonRow: View {
+    let item: Pokemon
+    let store: StoreOf<PokemonListFeature>
+    
+    var body: some View {
+        HStack {
+            AsyncRefreshableImageView(url: item.imageUrl)
+            
+            Text(item.name.capitalized)
+                .font(.largeTitle)
+            
+            Spacer()
+        }
+        .frame(height: 100)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .onAppear(perform: {
+            store.send(.onAppearOf(item))
+        })
+        .onTapGesture {
+            store.send(.itemTapped(item))
         }
     }
 }
