@@ -47,7 +47,7 @@ struct PokemonListFeature {
             switch action {
             case .itemTapped(let item):
                 //show details
-                state.path.append(.details(PokemonDetailsFeature.State(details: PokemonDetails(), pokemon: item)))
+                state.path.append(.details(PokemonDetailsFeature.State(pokemon: item)))
                 return .none
             case .onAppear:
                 return .send(.loadAfter(nil))
@@ -73,6 +73,8 @@ struct PokemonListFeature {
                 return .send(.loadAfter(state.models.last))
                 
             case .loadAfter(let item):
+                if item == nil && !state.models.isEmpty { return .none }
+                
                 return .run { [offset = item?.index ?? 0] send in
                     do {
                         let newItems = try await remoteClient.fetchPokemons(offset: offset)
@@ -111,9 +113,9 @@ struct PokemonListView: View {
                     })
                 }
             }
-            .onAppear(perform: {
+            .task {
                 store.send(.onAppear)
-            })
+            }
         } destination: { store in
             switch store.case {
             case .details(let store):

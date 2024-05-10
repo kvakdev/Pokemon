@@ -10,44 +10,45 @@ import Foundation
 // MARK: - PokemonDetails
 struct RemotePokemonDetails: Codable {
     let abilities: [Ability]
-    let baseExperience: JSONNull?
-    let cries: Cries
+    let baseExperience: Int
+//    let cries: Cries
     let forms: [Species]
-    let gameIndices: [JSONAny]
-    let height: Int
-    let heldItems: [JSONAny]
-    let id: Int
-    let isDefault: Bool
-    let locationAreaEncounters: String
-    let moves: [Move]
-    let name: String
-    let order: Int
-    let pastAbilities, pastTypes: [JSONAny]
-    let species: Species
-    let sprites: Sprites
-    let stats: [Stat]
-    let types: [TypeElement]
-    let weight: Int
+//    let gameIndices: [JSONAny]
+//    let height: Int
+//    let heldItems: [JSONAny]
+//    let id: Int
+//    let isDefault: Bool
+//    let locationAreaEncounters: String
+//    let moves: [Move]
+//    let name: String
+//    let order: Int
+//    let pastAbilities, pastTypes: [JSONAny]
+//    let species: Species
+//    let sprites: Sprites
+//    let stats: [Stat]
+//    let types: [TypeElement]
+//    let weight: Int
 
     enum CodingKeys: String, CodingKey {
         case abilities
+        case forms
         case baseExperience = "base_experience"
-        case cries, forms
-        case gameIndices = "game_indices"
-        case height
-        case heldItems = "held_items"
-        case id
-        case isDefault = "is_default"
-        case locationAreaEncounters = "location_area_encounters"
-        case moves, name, order
-        case pastAbilities = "past_abilities"
-        case pastTypes = "past_types"
-        case species, sprites, stats, types, weight
+//        case cries, forms
+//        case gameIndices = "game_indices"
+//        case height
+//        case heldItems = "held_items"
+//        case id
+//        case isDefault = "is_default"
+//        case locationAreaEncounters = "location_area_encounters"
+//        case moves, name, order
+//        case pastAbilities = "past_abilities"
+//        case pastTypes = "past_types"
+//        case species, sprites, stats, types, weight
     }
 }
 
 // MARK: - Ability
-struct Ability: Codable {
+struct Ability: Codable, Equatable, Hashable {
     let ability: Species
     let isHidden: Bool
     let slot: Int
@@ -60,7 +61,7 @@ struct Ability: Codable {
 }
 
 // MARK: - Species
-struct Species: Codable {
+struct Species: Codable, Equatable, Hashable {
     let name: String
     let url: String
 }
