@@ -7,9 +7,13 @@
 
 import SwiftUI
 import ComposableArchitecture
+import OggDecoder
+import AVFoundation
 
 struct PokemonDetailsFeature: Reducer {
     @Dependency(\.remoteClient) var client
+    @Dependency(\.cryLoader) var cryClient
+    @Dependency(\.audioPlayer) var player
     
     @ObservableState
     struct State: Equatable, Hashable {
@@ -21,6 +25,7 @@ struct PokemonDetailsFeature: Reducer {
         case onAppear
         case detailsLoaded(PokemonDetails)
         case error(String)
+        case cryButtonTapped
     }
     
     var body: some ReducerOf<Self> {
@@ -42,16 +47,25 @@ struct PokemonDetailsFeature: Reducer {
             case .detailsLoaded(let details):
                 state.details = details
                 
-                
+                return .none
+            case .cryButtonTapped:
+                guard let latestCryUrl = URL(string: state.details?.cries.latest ?? "") else { return .none }
+                return .run { send in
+                    do {
+                        let wavURL = try await cryClient.loadCry(remoteUrl: latestCryUrl)
+                        try self.player.play(url: wavURL)
+                    } catch {
+                        await send(.error(error.localizedDescription))
+                    }
+                }
             }
-            
-            return .none
         }
     }
 }
 
 struct PokemonDetailsView: View {
     let store: StoreOf<PokemonDetailsFeature>
+    @State var player: AVAudioPlayer?
     
     var body: some View {
         VStack(spacing: 0) {
@@ -70,6 +84,17 @@ struct PokemonDetailsView: View {
                     Text(item.ability.name.capitalized)
                 }
                 Text("Base experience: \(details.baseExperience)")
+                Button(action: {
+                    store.send(.cryButtonTapped)
+                }, label: {
+                    Text("Tap to hear the latest cry")
+                })
+                .buttonBorderShape(.automatic)
+                .buttonStyle(.borderedProminent)
+                .padding()
+                .task {
+                    let player = try? AVAudioPlayer(contentsOf: URL(string: details.cries.latest)!)
+                }
             } else {
                 ProgressView()
             }

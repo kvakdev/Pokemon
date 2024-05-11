@@ -11,6 +11,7 @@ struct PokemonDetails: Equatable, Hashable {
     let abilities: [Ability]
     let forms: [Species]
     let baseExperience: Int
+    let cries: Cries
 }
 
 

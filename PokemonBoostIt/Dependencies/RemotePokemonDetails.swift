@@ -11,7 +11,7 @@ import Foundation
 struct RemotePokemonDetails: Codable {
     let abilities: [Ability]
     let baseExperience: Int
-//    let cries: Cries
+    let cries: Cries
     let forms: [Species]
 //    let gameIndices: [JSONAny]
 //    let height: Int
@@ -33,6 +33,7 @@ struct RemotePokemonDetails: Codable {
         case abilities
         case forms
         case baseExperience = "base_experience"
+        case cries
 //        case cries, forms
 //        case gameIndices = "game_indices"
 //        case height
@@ -67,9 +68,8 @@ struct Species: Codable, Equatable, Hashable {
 }
 
 // MARK: - Cries
-struct Cries: Codable {
+struct Cries: Codable, Equatable, Hashable {
     let latest: String
-    let legacy: JSONNull?
 }
 
 // MARK: - Move

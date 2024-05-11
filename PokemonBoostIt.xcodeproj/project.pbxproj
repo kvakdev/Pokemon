@@ -21,6 +21,10 @@
 		CEEFCD432BEBAC2A0072E6BF /* RemotePokemonDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFCD422BEBAC2A0072E6BF /* RemotePokemonDetails.swift */; };
 		CEEFCD452BEBAC820072E6BF /* PokemonDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFCD442BEBAC820072E6BF /* PokemonDetails.swift */; };
 		CEEFCD472BECE54E0072E6BF /* Pokemon+SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFCD462BECE54E0072E6BF /* Pokemon+SampleData.swift */; };
+		CEEFCD4A2BEE63FA0072E6BF /* OggDecoder in Frameworks */ = {isa = PBXBuildFile; productRef = CEEFCD492BEE63FA0072E6BF /* OggDecoder */; };
+		CEEFCD4D2BEEA4AF0072E6BF /* CryLoaderClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFCD4C2BEEA4AF0072E6BF /* CryLoaderClient.swift */; };
+		CEEFCD4F2BEFAB470072E6BF /* output.wav in Resources */ = {isa = PBXBuildFile; fileRef = CEEFCD4E2BEFAB470072E6BF /* output.wav */; };
+		CEEFCD512BEFAED60072E6BF /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFCD502BEFAED60072E6BF /* AudioPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		CEEFCD422BEBAC2A0072E6BF /* RemotePokemonDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemotePokemonDetails.swift; sourceTree = "<group>"; };
 		CEEFCD442BEBAC820072E6BF /* PokemonDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetails.swift; sourceTree = "<group>"; };
 		CEEFCD462BECE54E0072E6BF /* Pokemon+SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pokemon+SampleData.swift"; sourceTree = "<group>"; };
+		CEEFCD4B2BEE97230072E6BF /* cries_pokemon_latest_10277.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = cries_pokemon_latest_10277.ogg; sourceTree = "<group>"; };
+		CEEFCD4C2BEEA4AF0072E6BF /* CryLoaderClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryLoaderClient.swift; sourceTree = "<group>"; };
+		CEEFCD4E2BEFAB470072E6BF /* output.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = output.wav; sourceTree = "<group>"; };
+		CEEFCD502BEFAED60072E6BF /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEEFCD352BEB8FAE0072E6BF /* ComposableArchitecture in Frameworks */,
+				CEEFCD4A2BEE63FA0072E6BF /* OggDecoder in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +120,8 @@
 				CEEFCD092BEB8F430072E6BF /* PokemonBoostItApp.swift */,
 				CEEFCD362BEB8FF40072E6BF /* PokemonListView.swift */,
 				CEEFCD402BEBABAC0072E6BF /* PokemonDetailsView.swift */,
+				CEEFCD4B2BEE97230072E6BF /* cries_pokemon_latest_10277.ogg */,
+				CEEFCD4E2BEFAB470072E6BF /* output.wav */,
 				CEEFCD3B2BEB97D00072E6BF /* Models */,
 				CEEFCD382BEB976B0072E6BF /* Dependencies */,
 				CEEFCD0D2BEB8F470072E6BF /* Assets.xcassets */,
@@ -148,6 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				CEEFCD392BEB97760072E6BF /* RemoteClient.swift */,
+				CEEFCD4C2BEEA4AF0072E6BF /* CryLoaderClient.swift */,
+				CEEFCD502BEFAED60072E6BF /* AudioPlayer.swift */,
 				CEEFCD422BEBAC2A0072E6BF /* RemotePokemonDetails.swift */,
 			);
 			path = Dependencies;
@@ -181,6 +194,7 @@
 			name = PokemonBoostIt;
 			packageProductDependencies = (
 				CEEFCD342BEB8FAE0072E6BF /* ComposableArchitecture */,
+				CEEFCD492BEE63FA0072E6BF /* OggDecoder */,
 			);
 			productName = PokemonBoostIt;
 			productReference = CEEFCD062BEB8F430072E6BF /* PokemonBoostIt.app */;
@@ -256,6 +270,7 @@
 			mainGroup = CEEFCCFD2BEB8F430072E6BF;
 			packageReferences = (
 				CEEFCD332BEB8FAE0072E6BF /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				CEEFCD482BEE63FA0072E6BF /* XCRemoteSwiftPackageReference "OggDecoder" */,
 			);
 			productRefGroup = CEEFCD072BEB8F430072E6BF /* Products */;
 			projectDirPath = "";
@@ -273,6 +288,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEEFCD4F2BEFAB470072E6BF /* output.wav in Resources */,
 				CEEFCD112BEB8F470072E6BF /* Preview Assets.xcassets in Resources */,
 				CEEFCD0E2BEB8F470072E6BF /* Assets.xcassets in Resources */,
 			);
@@ -305,6 +321,8 @@
 				CEEFCD472BECE54E0072E6BF /* Pokemon+SampleData.swift in Sources */,
 				CEEFCD3D2BEB97D90072E6BF /* Pokemon.swift in Sources */,
 				CEEFCD3A2BEB97760072E6BF /* RemoteClient.swift in Sources */,
+				CEEFCD4D2BEEA4AF0072E6BF /* CryLoaderClient.swift in Sources */,
+				CEEFCD512BEFAED60072E6BF /* AudioPlayer.swift in Sources */,
 				CEEFCD432BEBAC2A0072E6BF /* RemotePokemonDetails.swift in Sources */,
 				CEEFCD0A2BEB8F430072E6BF /* PokemonBoostItApp.swift in Sources */,
 			);
@@ -648,6 +666,14 @@
 				minimumVersion = 1.10.2;
 			};
 		};
+		CEEFCD482BEE63FA0072E6BF /* XCRemoteSwiftPackageReference "OggDecoder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/arkasas/OggDecoder";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -655,6 +681,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CEEFCD332BEB8FAE0072E6BF /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
+		};
+		CEEFCD492BEE63FA0072E6BF /* OggDecoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEEFCD482BEE63FA0072E6BF /* XCRemoteSwiftPackageReference "OggDecoder" */;
+			productName = OggDecoder;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

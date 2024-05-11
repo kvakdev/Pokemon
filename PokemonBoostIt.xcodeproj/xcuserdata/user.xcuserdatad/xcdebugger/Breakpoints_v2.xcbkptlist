@@ -7,222 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A74378AE-FE12-425F-ACAB-5244255E40F7"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PokemonBoostIt/PokemonListView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "A74378AE-FE12-425F-ACAB-5244255E40F7 - 9312fa00ce96bbc1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable (ComposableArchitecture.Send&lt;PokemonBoostIt.PokemonListFeature.Action&gt;) async -&gt; () in closure #1 (inout PokemonBoostIt.PokemonListFeature.State, PokemonBoostIt.PokemonListFeature.Action) -&gt; ComposableArchitecture.Effect&lt;PokemonBoostIt.PokemonListFeature.Action&gt; in PokemonBoostIt.PokemonListFeature.body.getter : some"
-                  moduleName = "PokemonBoostIt"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/PokemonListView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "79"
-                  endingLineNumber = "79"
-                  offsetFromSymbolStart = "96">
-               </Location>
-               <Location
-                  uuid = "A74378AE-FE12-425F-ACAB-5244255E40F7 - 72e01303758515c2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable (ComposableArchitecture.Send&lt;PokemonBoostIt.PokemonListFeature.Action&gt;) async -&gt; () in closure #1 (inout PokemonBoostIt.PokemonListFeature.State, PokemonBoostIt.PokemonListFeature.Action) -&gt; ComposableArchitecture.Effect&lt;PokemonBoostIt.PokemonListFeature.Action&gt; in PokemonBoostIt.PokemonListFeature.body.getter : some"
-                  moduleName = "PokemonBoostIt"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/PokemonListView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "79"
-                  endingLineNumber = "79"
-                  offsetFromSymbolStart = "52">
-               </Location>
-               <Location
-                  uuid = "A74378AE-FE12-425F-ACAB-5244255E40F7 - d06f29fdb8b077c3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(5) suspend resume partial function for closure #1 @Sendable (ComposableArchitecture.Send&lt;PokemonBoostIt.PokemonListFeature.Action&gt;) async -&gt; () in closure #1 (inout PokemonBoostIt.PokemonListFeature.State, PokemonBoostIt.PokemonListFeature.Action) -&gt; ComposableArchitecture.Effect&lt;PokemonBoostIt.PokemonListFeature.Action&gt; in PokemonBoostIt.PokemonListFeature.body.getter : some"
-                  moduleName = "PokemonBoostIt"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/PokemonListView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "79"
-                  endingLineNumber = "79"
-                  offsetFromSymbolStart = "76">
-               </Location>
-               <Location
-                  uuid = "A74378AE-FE12-425F-ACAB-5244255E40F7 - 9312fa00ce96b407"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable (ComposableArchitecture.Send&lt;PokemonBoostIt.PokemonListFeature.Action&gt;) async -&gt; () in closure #1 (inout PokemonBoostIt.PokemonListFeature.State, PokemonBoostIt.PokemonListFeature.Action) -&gt; ComposableArchitecture.Effect&lt;PokemonBoostIt.PokemonListFeature.Action&gt; in PokemonBoostIt.PokemonListFeature.body.getter : some"
-                  moduleName = "PokemonBoostIt"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/PokemonListView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "81"
-                  endingLineNumber = "81"
-                  offsetFromSymbolStart = "96">
-               </Location>
-               <Location
-                  uuid = "A74378AE-FE12-425F-ACAB-5244255E40F7 - 72e0130375851a04"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable (ComposableArchitecture.Send&lt;PokemonBoostIt.PokemonListFeature.Action&gt;) async -&gt; () in closure #1 (inout PokemonBoostIt.PokemonListFeature.State, PokemonBoostIt.PokemonListFeature.Action) -&gt; ComposableArchitecture.Effect&lt;PokemonBoostIt.PokemonListFeature.Action&gt; in PokemonBoostIt.PokemonListFeature.body.getter : some"
-                  moduleName = "PokemonBoostIt"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/PokemonListView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "81"
-                  endingLineNumber = "81"
-                  offsetFromSymbolStart = "52">
-               </Location>
-               <Location
-                  uuid = "A74378AE-FE12-425F-ACAB-5244255E40F7 - d06f29fdb8b07805"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(5) suspend resume partial function for closure #1 @Sendable (ComposableArchitecture.Send&lt;PokemonBoostIt.PokemonListFeature.Action&gt;) async -&gt; () in closure #1 (inout PokemonBoostIt.PokemonListFeature.State, PokemonBoostIt.PokemonListFeature.Action) -&gt; ComposableArchitecture.Effect&lt;PokemonBoostIt.PokemonListFeature.Action&gt; in PokemonBoostIt.PokemonListFeature.body.getter : some"
-                  moduleName = "PokemonBoostIt"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/PokemonListView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "81"
-                  endingLineNumber = "81"
-                  offsetFromSymbolStart = "76">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E4FB6866-5DE8-4CC0-AE8B-10C5D2D2BB03"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PokemonBoostIt/PokemonListView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "E4FB6866-5DE8-4CC0-AE8B-10C5D2D2BB03 - bffa46ffefdcde02"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(6) suspend resume partial function for closure #1 @Sendable (ComposableArchitecture.Send&lt;PokemonBoostIt.PokemonListFeature.Action&gt;) async -&gt; () in closure #1 (inout PokemonBoostIt.PokemonListFeature.State, PokemonBoostIt.PokemonListFeature.Action) -&gt; ComposableArchitecture.Effect&lt;PokemonBoostIt.PokemonListFeature.Action&gt; in PokemonBoostIt.PokemonListFeature.body.getter : some"
-                  moduleName = "PokemonBoostIt"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/PokemonListView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "81"
-                  endingLineNumber = "81"
-                  offsetFromSymbolStart = "152">
-               </Location>
-               <Location
-                  uuid = "E4FB6866-5DE8-4CC0-AE8B-10C5D2D2BB03 - 1d495ffe12cb3c03"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(7) suspend resume partial function for closure #1 @Sendable (ComposableArchitecture.Send&lt;PokemonBoostIt.PokemonListFeature.Action&gt;) async -&gt; () in closure #1 (inout PokemonBoostIt.PokemonListFeature.State, PokemonBoostIt.PokemonListFeature.Action) -&gt; ComposableArchitecture.Effect&lt;PokemonBoostIt.PokemonListFeature.Action&gt; in PokemonBoostIt.PokemonListFeature.body.getter : some"
-                  moduleName = "PokemonBoostIt"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/PokemonListView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "81"
-                  endingLineNumber = "81"
-                  offsetFromSymbolStart = "52">
-               </Location>
-               <Location
-                  uuid = "E4FB6866-5DE8-4CC0-AE8B-10C5D2D2BB03 - fcd474f859f66200"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(8) suspend resume partial function for closure #1 @Sendable (ComposableArchitecture.Send&lt;PokemonBoostIt.PokemonListFeature.Action&gt;) async -&gt; () in closure #1 (inout PokemonBoostIt.PokemonListFeature.State, PokemonBoostIt.PokemonListFeature.Action) -&gt; ComposableArchitecture.Effect&lt;PokemonBoostIt.PokemonListFeature.Action&gt; in PokemonBoostIt.PokemonListFeature.body.getter : some"
-                  moduleName = "PokemonBoostIt"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/PokemonListView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "81"
-                  endingLineNumber = "81"
-                  offsetFromSymbolStart = "76">
-               </Location>
-               <Location
-                  uuid = "E4FB6866-5DE8-4CC0-AE8B-10C5D2D2BB03 - bffa46ffefdcde40"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(6) suspend resume partial function for closure #1 @Sendable (ComposableArchitecture.Send&lt;PokemonBoostIt.PokemonListFeature.Action&gt;) async -&gt; () in closure #1 (inout PokemonBoostIt.PokemonListFeature.State, PokemonBoostIt.PokemonListFeature.Action) -&gt; ComposableArchitecture.Effect&lt;PokemonBoostIt.PokemonListFeature.Action&gt; in PokemonBoostIt.PokemonListFeature.body.getter : some"
-                  moduleName = "PokemonBoostIt"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/PokemonListView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "83"
-                  endingLineNumber = "83"
-                  offsetFromSymbolStart = "152">
-               </Location>
-               <Location
-                  uuid = "E4FB6866-5DE8-4CC0-AE8B-10C5D2D2BB03 - 1d495ffe12cb3c41"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(7) suspend resume partial function for closure #1 @Sendable (ComposableArchitecture.Send&lt;PokemonBoostIt.PokemonListFeature.Action&gt;) async -&gt; () in closure #1 (inout PokemonBoostIt.PokemonListFeature.State, PokemonBoostIt.PokemonListFeature.Action) -&gt; ComposableArchitecture.Effect&lt;PokemonBoostIt.PokemonListFeature.Action&gt; in PokemonBoostIt.PokemonListFeature.body.getter : some"
-                  moduleName = "PokemonBoostIt"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/PokemonListView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "83"
-                  endingLineNumber = "83"
-                  offsetFromSymbolStart = "52">
-               </Location>
-               <Location
-                  uuid = "E4FB6866-5DE8-4CC0-AE8B-10C5D2D2BB03 - fcd474f859f66242"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(8) suspend resume partial function for closure #1 @Sendable (ComposableArchitecture.Send&lt;PokemonBoostIt.PokemonListFeature.Action&gt;) async -&gt; () in closure #1 (inout PokemonBoostIt.PokemonListFeature.State, PokemonBoostIt.PokemonListFeature.Action) -&gt; ComposableArchitecture.Effect&lt;PokemonBoostIt.PokemonListFeature.Action&gt; in PokemonBoostIt.PokemonListFeature.body.getter : some"
-                  moduleName = "PokemonBoostIt"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/PokemonListView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "83"
-                  endingLineNumber = "83"
-                  offsetFromSymbolStart = "76">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "C9C67A02-51C7-4E02-AAF0-01D6127B5E72"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -325,6 +109,21 @@
                   endingLineNumber = "70"
                   offsetFromSymbolStart = "2444">
                </Location>
+               <Location
+                  uuid = "C9C67A02-51C7-4E02-AAF0-01D6127B5E72 - a7bd7b26b1857ae5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (inout PokemonBoostIt.PokemonListFeature.State, PokemonBoostIt.PokemonListFeature.Action) -&gt; ComposableArchitecture.Effect&lt;PokemonBoostIt.PokemonListFeature.Action&gt; in PokemonBoostIt.PokemonListFeature.body.getter : some"
+                  moduleName = "PokemonBoostIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/PokemonListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "2472">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -338,13 +137,13 @@
             filePath = "PokemonBoostIt/PokemonDetailsView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
                <Location
-                  uuid = "6518EA2F-CEA1-4DBE-86F5-4397F5D4F304 - 502e38f4870b9a1c"
+                  uuid = "6518EA2F-CEA1-4DBE-86F5-4397F5D4F304 - 502e38f4870b9bf1"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -354,12 +153,12 @@
                   urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/PokemonDetailsView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
                   offsetFromSymbolStart = "256">
                </Location>
                <Location
-                  uuid = "6518EA2F-CEA1-4DBE-86F5-4397F5D4F304 - ea32f52a9abf381b"
+                  uuid = "6518EA2F-CEA1-4DBE-86F5-4397F5D4F304 - ea32f52a9abf39f6"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -369,12 +168,12 @@
                   urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/PokemonDetailsView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
                   offsetFromSymbolStart = "20">
                </Location>
                <Location
-                  uuid = "6518EA2F-CEA1-4DBE-86F5-4397F5D4F304 - 8457b2609c22de1a"
+                  uuid = "6518EA2F-CEA1-4DBE-86F5-4397F5D4F304 - 8457b2609c22dff7"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -384,8 +183,8 @@
                   urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/PokemonDetailsView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
                   offsetFromSymbolStart = "76">
                </Location>
             </Locations>
@@ -437,6 +236,241 @@
                   offsetFromSymbolStart = "332">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D4F6B7D6-B500-4150-B4AA-8C4709CE6DA3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PokemonBoostIt/PokemonDetailsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "97BF1FF1-B159-461D-A42B-4016C289E46E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PokemonBoostIt/PokemonDetailsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "32727961-F4BC-41C5-A20B-3CAFE5EA57F9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PokemonBoostIt/Dependencies/CryLoaderClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "loadCry(remoteUrl:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "32727961-F4BC-41C5-A20B-3CAFE5EA57F9 - 2a99b91cd96b374b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for PokemonBoostIt.CryLoaderClient.loadCry(remoteUrl: Foundation.URL) async throws -&gt; Foundation.URL"
+                  moduleName = "PokemonBoostIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/Dependencies/CryLoaderClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "1112">
+               </Location>
+               <Location
+                  uuid = "32727961-F4BC-41C5-A20B-3CAFE5EA57F9 - eba746132a540384"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for PokemonBoostIt.CryLoaderClient.loadCry(remoteUrl: Foundation.URL) async throws -&gt; Foundation.URL"
+                  moduleName = "PokemonBoostIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/Dependencies/CryLoaderClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "32727961-F4BC-41C5-A20B-3CAFE5EA57F9 - eba746132a540342"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for PokemonBoostIt.CryLoaderClient.loadCry(remoteUrl: Foundation.URL) async throws -&gt; Foundation.URL"
+                  moduleName = "PokemonBoostIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/Dependencies/CryLoaderClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "32727961-F4BC-41C5-A20B-3CAFE5EA57F9 - a5dc989e5875f58f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for PokemonBoostIt.CryLoaderClient.loadCry(remoteUrl: Foundation.URL) async throws -&gt; Foundation.URL"
+                  moduleName = "PokemonBoostIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/Dependencies/CryLoaderClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "32727961-F4BC-41C5-A20B-3CAFE5EA57F9 - a5dc989e5875f549"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for PokemonBoostIt.CryLoaderClient.loadCry(remoteUrl: Foundation.URL) async throws -&gt; Foundation.URL"
+                  moduleName = "PokemonBoostIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/Dependencies/CryLoaderClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "124">
+               </Location>
+               <Location
+                  uuid = "32727961-F4BC-41C5-A20B-3CAFE5EA57F9 - cff4cfda1ba00a82"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) suspend resume partial function for PokemonBoostIt.CryLoaderClient.loadCry(remoteUrl: Foundation.URL) async throws -&gt; Foundation.URL"
+                  moduleName = "PokemonBoostIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/Dependencies/CryLoaderClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "32727961-F4BC-41C5-A20B-3CAFE5EA57F9 - cff4cfda1ba00a44"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) suspend resume partial function for PokemonBoostIt.CryLoaderClient.loadCry(remoteUrl: Foundation.URL) async throws -&gt; Foundation.URL"
+                  moduleName = "PokemonBoostIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/Dependencies/CryLoaderClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AE8B5AC7-30BA-4ED7-AE2E-278E3741F571"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PokemonBoostIt/Dependencies/CryLoaderClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "loadCry(remoteUrl:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AE8B5AC7-30BA-4ED7-AE2E-278E3741F571 - a5dc989e5875f50b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for PokemonBoostIt.CryLoaderClient.loadCry(remoteUrl: Foundation.URL) async throws -&gt; Foundation.URL"
+                  moduleName = "PokemonBoostIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/Dependencies/CryLoaderClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "216">
+               </Location>
+               <Location
+                  uuid = "AE8B5AC7-30BA-4ED7-AE2E-278E3741F571 - 17137819db16ab05"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for PokemonBoostIt.CryLoaderClient.loadCry(remoteUrl: Foundation.URL) async throws -&gt; Foundation.URL"
+                  moduleName = "PokemonBoostIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/Dependencies/CryLoaderClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "76">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DA098BE2-0B96-4FD3-AD0F-318994F1BD3E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PokemonBoostIt/Dependencies/CryLoaderClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "loadCry(remoteUrl:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "716CD6CB-6423-4EFB-A5FE-B8B4A00EFE2F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PokemonBoostIt/Dependencies/CryLoaderClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "loadCry(remoteUrl:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

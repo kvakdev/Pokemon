@@ -56,7 +56,7 @@ class RemoteClient: DependencyKey {
         let data = try await URLSession.shared.data(from: url)
         let mapped = try JSONDecoder().decode(RemotePokemonDetails.self, from: data.0)
         
-        return PokemonDetails(abilities: mapped.abilities, forms: mapped.forms, baseExperience: mapped.baseExperience)
+        return PokemonDetails(abilities: mapped.abilities, forms: mapped.forms, baseExperience: mapped.baseExperience, cries: mapped.cries)
     }
 }
 
