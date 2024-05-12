@@ -124,6 +124,21 @@
                   endingLineNumber = "70"
                   offsetFromSymbolStart = "2472">
                </Location>
+               <Location
+                  uuid = "C9C67A02-51C7-4E02-AAF0-01D6127B5E72 - a7bd7b26b1857ae5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (inout PokemonBoostIt.PokemonListFeature.State, PokemonBoostIt.PokemonListFeature.Action) -&gt; ComposableArchitecture.Effect&lt;PokemonBoostIt.PokemonListFeature.Action&gt; in PokemonBoostIt.PokemonListFeature.body.getter : some"
+                  moduleName = "PokemonBoostIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/PokemonListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "2480">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -241,225 +256,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D4F6B7D6-B500-4150-B4AA-8C4709CE6DA3"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PokemonBoostIt/PokemonDetailsView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "97BF1FF1-B159-461D-A42B-4016C289E46E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PokemonBoostIt/PokemonDetailsView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "32727961-F4BC-41C5-A20B-3CAFE5EA57F9"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PokemonBoostIt/Dependencies/CryLoaderClient.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "loadCry(remoteUrl:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "32727961-F4BC-41C5-A20B-3CAFE5EA57F9 - 2a99b91cd96b374b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for PokemonBoostIt.CryLoaderClient.loadCry(remoteUrl: Foundation.URL) async throws -&gt; Foundation.URL"
-                  moduleName = "PokemonBoostIt"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/Dependencies/CryLoaderClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "42"
-                  endingLineNumber = "42"
-                  offsetFromSymbolStart = "1112">
-               </Location>
-               <Location
-                  uuid = "32727961-F4BC-41C5-A20B-3CAFE5EA57F9 - eba746132a540384"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for PokemonBoostIt.CryLoaderClient.loadCry(remoteUrl: Foundation.URL) async throws -&gt; Foundation.URL"
-                  moduleName = "PokemonBoostIt"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/Dependencies/CryLoaderClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "24">
-               </Location>
-               <Location
-                  uuid = "32727961-F4BC-41C5-A20B-3CAFE5EA57F9 - eba746132a540342"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for PokemonBoostIt.CryLoaderClient.loadCry(remoteUrl: Foundation.URL) async throws -&gt; Foundation.URL"
-                  moduleName = "PokemonBoostIt"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/Dependencies/CryLoaderClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "42"
-                  endingLineNumber = "42"
-                  offsetFromSymbolStart = "56">
-               </Location>
-               <Location
-                  uuid = "32727961-F4BC-41C5-A20B-3CAFE5EA57F9 - a5dc989e5875f58f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for PokemonBoostIt.CryLoaderClient.loadCry(remoteUrl: Foundation.URL) async throws -&gt; Foundation.URL"
-                  moduleName = "PokemonBoostIt"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/Dependencies/CryLoaderClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "60">
-               </Location>
-               <Location
-                  uuid = "32727961-F4BC-41C5-A20B-3CAFE5EA57F9 - a5dc989e5875f549"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for PokemonBoostIt.CryLoaderClient.loadCry(remoteUrl: Foundation.URL) async throws -&gt; Foundation.URL"
-                  moduleName = "PokemonBoostIt"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/Dependencies/CryLoaderClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "42"
-                  endingLineNumber = "42"
-                  offsetFromSymbolStart = "124">
-               </Location>
-               <Location
-                  uuid = "32727961-F4BC-41C5-A20B-3CAFE5EA57F9 - cff4cfda1ba00a82"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(6) suspend resume partial function for PokemonBoostIt.CryLoaderClient.loadCry(remoteUrl: Foundation.URL) async throws -&gt; Foundation.URL"
-                  moduleName = "PokemonBoostIt"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/Dependencies/CryLoaderClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "24">
-               </Location>
-               <Location
-                  uuid = "32727961-F4BC-41C5-A20B-3CAFE5EA57F9 - cff4cfda1ba00a44"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(6) suspend resume partial function for PokemonBoostIt.CryLoaderClient.loadCry(remoteUrl: Foundation.URL) async throws -&gt; Foundation.URL"
-                  moduleName = "PokemonBoostIt"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/Dependencies/CryLoaderClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "42"
-                  endingLineNumber = "42"
-                  offsetFromSymbolStart = "56">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "AE8B5AC7-30BA-4ED7-AE2E-278E3741F571"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PokemonBoostIt/Dependencies/CryLoaderClient.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "loadCry(remoteUrl:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "AE8B5AC7-30BA-4ED7-AE2E-278E3741F571 - a5dc989e5875f50b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for PokemonBoostIt.CryLoaderClient.loadCry(remoteUrl: Foundation.URL) async throws -&gt; Foundation.URL"
-                  moduleName = "PokemonBoostIt"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/Dependencies/CryLoaderClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "216">
-               </Location>
-               <Location
-                  uuid = "AE8B5AC7-30BA-4ED7-AE2E-278E3741F571 - 17137819db16ab05"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(5) suspend resume partial function for PokemonBoostIt.CryLoaderClient.loadCry(remoteUrl: Foundation.URL) async throws -&gt; Foundation.URL"
-                  moduleName = "PokemonBoostIt"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/Dependencies/CryLoaderClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "76">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DA098BE2-0B96-4FD3-AD0F-318994F1BD3E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PokemonBoostIt/Dependencies/CryLoaderClient.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "loadCry(remoteUrl:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "716CD6CB-6423-4EFB-A5FE-B8B4A00EFE2F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -467,10 +263,165 @@
             filePath = "PokemonBoostIt/Dependencies/CryLoaderClient.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "loadCry(remoteUrl:)"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "loadCry(remoteUrl:pokemonName:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "716CD6CB-6423-4EFB-A5FE-B8B4A00EFE2F - 54d88610f266a994"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for PokemonBoostIt.CryLoaderClient.loadCry(remoteUrl: Foundation.URL, pokemonName: Swift.String) async throws -&gt; Foundation.URL"
+                  moduleName = "PokemonBoostIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/Dependencies/CryLoaderClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "252">
+               </Location>
+               <Location
+                  uuid = "716CD6CB-6423-4EFB-A5FE-B8B4A00EFE2F - c2e512f1a8b688d2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in closure #1 (Swift.CheckedContinuation&lt;Foundation.URL, Swift.Never&gt;) -&gt; () in PokemonBoostIt.CryLoaderClient.loadCry(remoteUrl: Foundation.URL, pokemonName: Swift.String) async throws -&gt; Foundation.URL"
+                  moduleName = "PokemonBoostIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/Dependencies/CryLoaderClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "828">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "391F0B02-D4D1-4CDD-8652-EBFCFC4D4730"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PokemonBoostIt/Dependencies/CryLoaderClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "loadCry(remoteUrl:pokemonName:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "391F0B02-D4D1-4CDD-8652-EBFCFC4D4730 - c2e512f1a8b68918"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in closure #1 (Swift.CheckedContinuation&lt;Foundation.URL, Swift.Never&gt;) -&gt; () in PokemonBoostIt.CryLoaderClient.loadCry(remoteUrl: Foundation.URL, pokemonName: Swift.String) async throws -&gt; Foundation.URL"
+                  moduleName = "PokemonBoostIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/Dependencies/CryLoaderClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "468">
+               </Location>
+               <Location
+                  uuid = "391F0B02-D4D1-4CDD-8652-EBFCFC4D4730 - e26960d606c20c68"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for PokemonBoostIt.CryLoaderClient.loadCry(remoteUrl: Foundation.URL, pokemonName: Swift.String) async throws -&gt; Foundation.URL"
+                  moduleName = "PokemonBoostIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/Dependencies/CryLoaderClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "1044">
+               </Location>
+               <Location
+                  uuid = "391F0B02-D4D1-4CDD-8652-EBFCFC4D4730 - 808f3343a787f8bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) await resume partial function for PokemonBoostIt.CryLoaderClient.loadCry(remoteUrl: Foundation.URL, pokemonName: Swift.String) async throws -&gt; Foundation.URL"
+                  moduleName = "PokemonBoostIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/Dependencies/CryLoaderClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "391F0B02-D4D1-4CDD-8652-EBFCFC4D4730 - 808f3343a787ffc4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) await resume partial function for PokemonBoostIt.CryLoaderClient.loadCry(remoteUrl: Foundation.URL, pokemonName: Swift.String) async throws -&gt; Foundation.URL"
+                  moduleName = "PokemonBoostIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/Dependencies/CryLoaderClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "391F0B02-D4D1-4CDD-8652-EBFCFC4D4730 - 54d88610f266af27"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for PokemonBoostIt.CryLoaderClient.loadCry(remoteUrl: Foundation.URL, pokemonName: Swift.String) async throws -&gt; Foundation.URL"
+                  moduleName = "PokemonBoostIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/Dependencies/CryLoaderClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "391F0B02-D4D1-4CDD-8652-EBFCFC4D4730 - 54d88610f266a85e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for PokemonBoostIt.CryLoaderClient.loadCry(remoteUrl: Foundation.URL, pokemonName: Swift.String) async throws -&gt; Foundation.URL"
+                  moduleName = "PokemonBoostIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/Dependencies/CryLoaderClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  uuid = "391F0B02-D4D1-4CDD-8652-EBFCFC4D4730 - 6da8ff037e0ee3b4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.CheckedContinuation&lt;Foundation.URL, Swift.Never&gt;) -&gt; () in PokemonBoostIt.CryLoaderClient.loadCry(remoteUrl: Foundation.URL, pokemonName: Swift.String) async throws -&gt; Foundation.URL"
+                  moduleName = "PokemonBoostIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Education/PokemonBoostIt/PokemonBoostIt/Dependencies/CryLoaderClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "236">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

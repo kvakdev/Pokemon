@@ -21,19 +21,21 @@ struct RemotePokemonDetails: Codable {
 //    let locationAreaEncounters: String
 //    let moves: [Move]
 //    let name: String
-//    let order: Int
+    let order: Int
 //    let pastAbilities, pastTypes: [JSONAny]
 //    let species: Species
 //    let sprites: Sprites
 //    let stats: [Stat]
 //    let types: [TypeElement]
-//    let weight: Int
+    let weight: Int
 
     enum CodingKeys: String, CodingKey {
         case abilities
         case forms
         case baseExperience = "base_experience"
         case cries
+        case order
+        case weight
 //        case cries, forms
 //        case gameIndices = "game_indices"
 //        case height

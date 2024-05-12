@@ -49,10 +49,11 @@ struct PokemonDetailsFeature: Reducer {
                 
                 return .none
             case .cryButtonTapped:
+                let name = state.pokemon.name
                 guard let latestCryUrl = URL(string: state.details?.cries.latest ?? "") else { return .none }
                 return .run { send in
                     do {
-                        let wavURL = try await cryClient.loadCry(remoteUrl: latestCryUrl)
+                        let wavURL = try await cryClient.loadCry(remoteUrl: latestCryUrl, pokemonName: name)
                         try self.player.play(url: wavURL)
                     } catch {
                         await send(.error(error.localizedDescription))
@@ -69,6 +70,8 @@ struct PokemonDetailsView: View {
     
     var body: some View {
         VStack(spacing: 0) {
+            Spacer()
+            
             AsyncRefreshableImageView(url: store.pokemon.imageUrl)
                 .padding(16)
                 .background(Color.orange.opacity(0.3))
@@ -84,17 +87,13 @@ struct PokemonDetailsView: View {
                     Text(item.ability.name.capitalized)
                 }
                 Text("Base experience: \(details.baseExperience)")
-                Button(action: {
-                    store.send(.cryButtonTapped)
-                }, label: {
-                    Text("Tap to hear the latest cry")
-                })
-                .buttonBorderShape(.automatic)
-                .buttonStyle(.borderedProminent)
-                .padding()
-                .task {
-                    let player = try? AVAudioPlayer(contentsOf: URL(string: details.cries.latest)!)
-                }
+                Text("Weight: \(details.weight)")
+                Text("Order: \(details.order)")
+                
+                Spacer()
+                
+                CryButton()
+                
             } else {
                 ProgressView()
             }
@@ -105,11 +104,27 @@ struct PokemonDetailsView: View {
             store.send(.onAppear)
         }
     }
+    
+    @ViewBuilder
+    func CryButton() -> some View {
+        Button(action: {
+            self.store.send(.cryButtonTapped)
+        }, label: {
+            Text("Tap to hear the latest cry")
+        })
+        .buttonBorderShape(.automatic)
+        .buttonStyle(.borderedProminent)
+        .padding()
+    }
 }
 
 #Preview {
     let pokemon = Pokemon.samples[0]
-    let store = Store(initialState: .init(details: nil, pokemon: pokemon), reducer: { PokemonDetailsFeature() })
+    let store = Store(initialState: .init(details: nil, pokemon: pokemon), reducer: { PokemonDetailsFeature()
+    })
     
     return PokemonDetailsView(store: store)
 }
+
+
+

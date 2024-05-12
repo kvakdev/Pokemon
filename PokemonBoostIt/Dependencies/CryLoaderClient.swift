@@ -9,6 +9,11 @@ import Foundation
 import ComposableArchitecture
 import OggDecoder
 
+enum AudioExtension: String {
+    case wav
+    case ogg
+}
+
 class CryLoaderClient: DependencyKey {
     static var liveValue: CryLoaderClient = CryLoaderClient()
     static var previewValue: CryLoaderClient = CryLoaderClient(isTestValue: true)
@@ -27,36 +32,56 @@ class CryLoaderClient: DependencyKey {
         return Bundle(for: CryLoaderClient.self).url(forResource: "output", withExtension: "wav")!
     }
     
-    func loadCry(remoteUrl: URL) async throws -> URL {
+    private func docDir() -> URL {
+        return try! FileManager.default.url(for: .documentDirectory,
+                                            in: .userDomainMask,
+                                            appropriateFor: nil,
+                                            create: false)
+    }
+    
+    private func oggURL(name: String) -> URL {
+        urlWith(name: name, fileExtension: .ogg)
+    }
+    
+    private func wavUrl(name: String) -> URL {
+        urlWith(name: name, fileExtension: .wav)
+    }
+    
+    private func urlWith(name: String, fileExtension: AudioExtension) -> URL {
+        docDir().appending(component: "pokemon-cry-\(name).\(fileExtension.rawValue)", directoryHint: .notDirectory)
+    }
+    
+    func loadCry(remoteUrl: URL, pokemonName: String) async throws -> URL {
         guard !isTestValue else { return testURL() }
         
-        let destinationURL = try? FileManager.default.url(for: .documentDirectory,
-                                                     in: .userDomainMask,
-                                                     appropriateFor: nil,
-                                                          create: false).appending(component: "pokemon-cry.ogg")
-        
-        guard let destinationURL else { throw LoadError.noDestinationUrl }
+        if FileManager.default.fileExists(atPath: wavUrl(name: pokemonName).path()) {
+            return wavUrl(name: pokemonName)
+        }
         
         let request = URLRequest(url: remoteUrl)
-        
+        let destinationURL = oggURL(name: pokemonName)
         let (location, response) = try await URLSession.shared.download(from: remoteUrl)
-       
-        try FileManager.default.removeItem(at: destinationURL)
-        
+        try? FileManager.default.removeItem(at: destinationURL)
         try FileManager.default.moveItem(at: location, to: destinationURL)
-        debugPrint("copied Location:", destinationURL)
         
         let decoder = OGGDecoder()
         let oggFile = destinationURL
+        
         let resultUrl: URL = await withCheckedContinuation { callback in
             decoder.decode(oggFile) { (savedWavUrl: URL?) in
-                // Do whatever you want with URL
-                // If convert was fail, returned url is nil
                 guard let url = savedWavUrl else { return }
                 
-                callback.resume(returning: url)
+                let cachedUrl = self.wavUrl(name: pokemonName)
+                do  {
+                    try FileManager.default.moveItem(at: url, to: cachedUrl)
+                } catch {
+                    debugPrint("error = \(error)")
+                }
+                callback.resume(returning: cachedUrl)
             }
         }
+        
+        try? FileManager.default.removeItem(at: destinationURL)
         
         return resultUrl
     }
