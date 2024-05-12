@@ -14,7 +14,7 @@ struct PokemonListFeature {
     typealias Item = Pokemon
     
     @ObservableState
-    struct State {
+    struct State: Equatable {
         var models: [Item] = []
         var error: String?
         

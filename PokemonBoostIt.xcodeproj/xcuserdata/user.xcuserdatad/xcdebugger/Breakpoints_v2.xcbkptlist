@@ -215,8 +215,8 @@
             filePath = "PokemonBoostIt/Dependencies/RemoteClient.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "fetchDetails(url:)"
             landmarkType = "7">
             <Locations>

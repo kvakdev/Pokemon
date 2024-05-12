@@ -32,6 +32,12 @@ class RemoteClient: DependencyKey {
         
         return client
     }()
+    static var testValue: RemoteClient = {
+        var client = RemoteClient()
+        client.getPokemons = { Pokemon.samples }
+        
+        return client
+    }()
     
     init(getPokemons: Callback? = nil) {
         self.getPokemons = getPokemons

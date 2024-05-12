@@ -7,30 +7,28 @@
 
 import XCTest
 @testable import PokemonBoostIt
+import ComposableArchitecture
 
 final class PokemonBoostItTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    @MainActor
+    func test_details_are_pushed() async {
+        let store = TestStore(initialState: .init(), reducer: { PokemonListFeature() })
+        let pokemon = Pokemon.samples[0]
+            
+        await store.send(.itemTapped(pokemon)) {
+            $0.path.append(.details(.init(pokemon: pokemon)))
         }
     }
-
+    
+    @MainActor
+    func test_fetch_is_trigerred_upon_onAppear() async {
+        let store = TestStore(initialState: .init(), reducer: { PokemonListFeature() })
+        
+        await store.send(.onAppear)
+        await store.receive(.loadAfter(nil), timeout: 1)
+        await store.receive(.itemsLoaded(Pokemon.samples), timeout: 1) {
+            $0.models = Pokemon.samples
+        }
+    }
 }
