@@ -11,25 +11,26 @@ import ComposableArchitecture
 @Reducer
 struct PokemonListFeature {
     @Dependency(\.remoteClient) var remoteClient
-    typealias Item = Pokemon
     
     @ObservableState
     struct State: Equatable {
-        var allModels: [Item] = []
-        var filteredModels: [Item] = []
+        var allModels: [Pokemon] = []
+        var filteredModels: [Pokemon] = []
         var error: String?
+        var noResultsMessage: String?
         var query = ""
+        var isLoading = false
         
         var path = StackState<Path.State>()
     }
     
     enum Action: Equatable {
-        case itemTapped(Item)
+        case itemTapped(Pokemon)
         case onAppear
-        case itemsLoaded([Item])
+        case itemsLoaded([Pokemon])
         case displayError(String)
-        case onAppearOf(Item)
-        case loadAfter(Item?)
+        case onAppearOf(Pokemon)
+        case loadAfter(Pokemon?)
         case retryLastLoad
         case path(StackActionOf<Path>)
         case searchQueryChanged(String)
@@ -53,19 +54,23 @@ struct PokemonListFeature {
                 //show details
                 state.path.append(.details(PokemonDetailsFeature.State(pokemon: item)))
                 return .none
+                
             case .onAppear:
                 return .send(.loadAfter(nil))
                 
             case .itemsLoaded(let newItems):
                 state.allModels.append(contentsOf: newItems)
                 state.error = nil
+                state.isLoading = false
                 
                 return .send(.filterQuery)
                 
             case .displayError(let error):
                 state.error = error
+                state.isLoading = false
                 
                 return .none
+                
             case .onAppearOf(let item):
                 let shouldLoad = state.error == nil && state.allModels.count < Constants.totalNumberOfItems && item == state.allModels.last
                 
@@ -78,6 +83,7 @@ struct PokemonListFeature {
                 
             case .loadAfter(let item):
                 if item == nil && !state.allModels.isEmpty { return .none }
+                state.isLoading = true
                 
                 return .run { [offset = item?.index ?? 0] send in
                     do {
@@ -97,11 +103,12 @@ struct PokemonListFeature {
             case .filterQuery:
                 guard !state.query.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
                     state.filteredModels = state.allModels
+                    
                 
                     return .none
                 }
                 
-                let lowercasedQuery = state.query.lowercased()
+                let lowercasedQuery = state.query.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
                 state.filteredModels = state.allModels.filter { $0.name.lowercased().contains(lowercasedQuery) }
                 return .none
             }
@@ -117,14 +124,25 @@ struct PokemonListView: View {
     var body: some View {
         NavigationStack(path: $store.scope(state: \.path, action: \.path)) {
             List {
-                TextField(text: $store.query.sending(\.searchQueryChanged)) {
-                    Text("Search:")
+                HStack {
+                    Image(systemName: "magnifyingglass")
+                    TextField(text: $store.query.sending(\.searchQueryChanged)) {
+                        Text("Search:")
+                            .font(.title2)
+                    }
                 }
+                .padding(.horizontal, 24)
+                .padding(.top)
                 
                 ForEach(store.filteredModels, id: \.self.name) { item in
                     PokemonRow(item: item, store: store)
                 }
                 .listRowSeparator(.hidden)
+                
+                if store.isLoading {
+                    ProgressView()
+                        .foregroundStyle(.orange)
+                }
                 
                 if let error = store.error {
                     Button(action: {
@@ -154,62 +172,4 @@ struct PokemonListView: View {
     PokemonListView(store: Store(initialState: .init(), reducer: {
         PokemonListFeature()
     }))
-}
-
-struct AsyncRefreshableImageView: View {
-    let url: URL
-    @State var id = UUID()
-    @State var isRetryDisabled = false
-    
-    var body: some View {
-        ZStack {
-            AsyncImage(url: url) { phase in
-                switch phase {
-                case .empty:
-                    ProgressView()
-                case .success(let image):
-                    image.resizable()
-                        .onAppear(perform: {
-                            self.isRetryDisabled = true
-                        })
-                case .failure(let error):
-                    Image(systemName: "arrow.uturn.left.circle")
-                        .onAppear(perform: {
-                            self.id = UUID()
-                        })
-                @unknown default:
-                    Image(systemName: "trash")
-                        .onAppear(perform: {
-                            self.id = UUID()
-                        })
-                }
-            }
-            .frame(width: 100, height: 100)
-            .id(id)
-        }
-    }
-}
-
-struct PokemonRow: View {
-    let item: Pokemon
-    let store: StoreOf<PokemonListFeature>
-    
-    var body: some View {
-        HStack {
-            AsyncRefreshableImageView(url: item.imageUrl)
-            
-            Text(item.name.capitalized)
-                .font(.largeTitle)
-            
-            Spacer()
-        }
-        .frame(height: 100)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .onAppear(perform: {
-            store.send(.onAppearOf(item))
-        })
-        .onTapGesture {
-            store.send(.itemTapped(item))
-        }
-    }
 }

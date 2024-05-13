@@ -31,6 +31,8 @@
 		CEEFCD4D2BEEA4AF0072E6BF /* CryLoaderClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFCD4C2BEEA4AF0072E6BF /* CryLoaderClient.swift */; };
 		CEEFCD4F2BEFAB470072E6BF /* output.wav in Resources */ = {isa = PBXBuildFile; fileRef = CEEFCD4E2BEFAB470072E6BF /* output.wav */; };
 		CEEFCD512BEFAED60072E6BF /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFCD502BEFAED60072E6BF /* AudioPlayer.swift */; };
+		CEF869BD2BF2D1E500BF441D /* AsyncRefreshableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF869BC2BF2D1E500BF441D /* AsyncRefreshableImageView.swift */; };
+		CEF869BF2BF2D20F00BF441D /* PokemonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF869BE2BF2D20F00BF441D /* PokemonRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		CEEFCD4C2BEEA4AF0072E6BF /* CryLoaderClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryLoaderClient.swift; sourceTree = "<group>"; };
 		CEEFCD4E2BEFAB470072E6BF /* output.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = output.wav; sourceTree = "<group>"; };
 		CEEFCD502BEFAED60072E6BF /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		CEF869BC2BF2D1E500BF441D /* AsyncRefreshableImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncRefreshableImageView.swift; sourceTree = "<group>"; };
+		CEF869BE2BF2D20F00BF441D /* PokemonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,10 +134,9 @@
 			isa = PBXGroup;
 			children = (
 				CEEFCD092BEB8F430072E6BF /* PokemonBoostItApp.swift */,
-				CEEFCD362BEB8FF40072E6BF /* PokemonListView.swift */,
-				CEEFCD402BEBABAC0072E6BF /* PokemonDetailsView.swift */,
-				CEEFCD4B2BEE97230072E6BF /* cries_pokemon_latest_10277.ogg */,
-				CEEFCD4E2BEFAB470072E6BF /* output.wav */,
+				CEF869BB2BF2D1D400BF441D /* ReusableView */,
+				CEF869B92BF2D16400BF441D /* Features */,
+				CEF869BA2BF2D16E00BF441D /* SampleSounds */,
 				CEEFCD3B2BEB97D00072E6BF /* Models */,
 				CEEFCD382BEB976B0072E6BF /* Dependencies */,
 				CEEFCD0D2BEB8F470072E6BF /* Assets.xcassets */,
@@ -192,6 +195,33 @@
 				CE4D4D9D2BF20B80004D86E4 /* Details */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CEF869B92BF2D16400BF441D /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				CEEFCD362BEB8FF40072E6BF /* PokemonListView.swift */,
+				CEEFCD402BEBABAC0072E6BF /* PokemonDetailsView.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		CEF869BA2BF2D16E00BF441D /* SampleSounds */ = {
+			isa = PBXGroup;
+			children = (
+				CEEFCD4B2BEE97230072E6BF /* cries_pokemon_latest_10277.ogg */,
+				CEEFCD4E2BEFAB470072E6BF /* output.wav */,
+			);
+			path = SampleSounds;
+			sourceTree = "<group>";
+		};
+		CEF869BB2BF2D1D400BF441D /* ReusableView */ = {
+			isa = PBXGroup;
+			children = (
+				CEF869BC2BF2D1E500BF441D /* AsyncRefreshableImageView.swift */,
+				CEF869BE2BF2D20F00BF441D /* PokemonRow.swift */,
+			);
+			path = ReusableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,8 +375,10 @@
 				CE782A672BF223570097DC8B /* PokemonDetailsMapper.swift in Sources */,
 				CEEFCD512BEFAED60072E6BF /* AudioPlayer.swift in Sources */,
 				CEEFCD432BEBAC2A0072E6BF /* RemotePokemonDetails.swift in Sources */,
+				CEF869BF2BF2D20F00BF441D /* PokemonRow.swift in Sources */,
 				CE782A6B2BF228260097DC8B /* RemoteDetailsClient.swift in Sources */,
 				CEEFCD0A2BEB8F430072E6BF /* PokemonBoostItApp.swift in Sources */,
+				CEF869BD2BF2D1E500BF441D /* AsyncRefreshableImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
