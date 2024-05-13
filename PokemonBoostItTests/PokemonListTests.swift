@@ -9,7 +9,7 @@ import XCTest
 @testable import PokemonBoostIt
 import ComposableArchitecture
 
-final class PokemonBoostItTests: XCTestCase {
+final class PokemonListTests: XCTestCase {
     
     @MainActor
     func test_details_are_pushed() async {

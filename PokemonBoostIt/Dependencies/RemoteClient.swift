@@ -69,11 +69,34 @@ class RemoteClient: DependencyKey {
                               order: mapped.order,
                               weight: mapped.weight)
     }
+    
+    func fetchTestDetails(url: URL) async throws -> PokemonDetails {
+        let bundle = Bundle(for: RemoteClient.self)
+        let fileURL = bundle.url(forResource: "VenusaurusDetailsDict", withExtension: "json")
+        
+        let fullURL = bundle.bundleURL
+        let data = try Data(contentsOf: fileURL!)
+        
+        return try PokemonDetailsMapper.map(data: data)
+    }
 }
 
 extension DependencyValues {
     var remoteClient: RemoteClient {
         get { self[RemoteClient.self] }
         set { self[RemoteClient.self] = newValue }
+    }
+}
+
+struct PokemonDetailsMapper {
+    static func map(data: Data) throws -> PokemonDetails {
+        let mapped = try JSONDecoder().decode(RemotePokemonDetails.self, from: data)
+        
+        return PokemonDetails(abilities: mapped.abilities,
+                              forms: mapped.forms,
+                              baseExperience: mapped.baseExperience,
+                              cries: mapped.cries,
+                              order: mapped.order,
+                              weight: mapped.weight)
     }
 }

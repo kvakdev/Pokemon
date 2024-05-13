@@ -58,7 +58,6 @@ class CryLoaderClient: DependencyKey {
             return wavUrl(name: pokemonName)
         }
         
-        let request = URLRequest(url: remoteUrl)
         let destinationURL = oggURL(name: pokemonName)
         let (location, response) = try await URLSession.shared.download(from: remoteUrl)
         try? FileManager.default.removeItem(at: destinationURL)
