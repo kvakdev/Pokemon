@@ -104,7 +104,6 @@ struct PokemonListFeature {
                 guard !state.query.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
                     state.filteredModels = state.allModels
                     
-                
                     return .none
                 }
                 
@@ -134,10 +133,15 @@ struct PokemonListView: View {
                 .padding(.horizontal, 24)
                 .padding(.top)
                 
-                ForEach(store.filteredModels, id: \.self.name) { item in
-                    PokemonRow(item: item, store: store)
+                if store.filteredModels.isEmpty {
+                    Text("No results found")
+                        .font(.title2)
+                } else {
+                    ForEach(store.filteredModels, id: \.self.name) { item in
+                        PokemonRow(item: item, store: store)
+                    }
+                    .listRowSeparator(.hidden)
                 }
-                .listRowSeparator(.hidden)
                 
                 if store.isLoading {
                     ProgressView()
