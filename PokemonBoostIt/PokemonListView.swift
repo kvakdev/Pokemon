@@ -15,8 +15,10 @@ struct PokemonListFeature {
     
     @ObservableState
     struct State: Equatable {
-        var models: [Item] = []
+        var allModels: [Item] = []
+        var filteredModels: [Item] = []
         var error: String?
+        var query = ""
         
         var path = StackState<Path.State>()
     }
@@ -30,6 +32,8 @@ struct PokemonListFeature {
         case loadAfter(Item?)
         case retryLastLoad
         case path(StackActionOf<Path>)
+        case searchQueryChanged(String)
+        case filterQuery
     }
     
     enum Constants {
@@ -53,27 +57,27 @@ struct PokemonListFeature {
                 return .send(.loadAfter(nil))
                 
             case .itemsLoaded(let newItems):
-                state.models.append(contentsOf: newItems)
+                state.allModels.append(contentsOf: newItems)
                 state.error = nil
                 
-                return .none
+                return .send(.filterQuery)
                 
             case .displayError(let error):
                 state.error = error
                 
                 return .none
             case .onAppearOf(let item):
-                let shouldLoad = state.error == nil && state.models.count < Constants.totalNumberOfItems && item == state.models.last
+                let shouldLoad = state.error == nil && state.allModels.count < Constants.totalNumberOfItems && item == state.allModels.last
                 
                 guard shouldLoad else { return .none }
                 
                 return .send(.loadAfter(item))
                 
             case .retryLastLoad:
-                return .send(.loadAfter(state.models.last))
+                return .send(.loadAfter(state.allModels.last))
                 
             case .loadAfter(let item):
-                if item == nil && !state.models.isEmpty { return .none }
+                if item == nil && !state.allModels.isEmpty { return .none }
                 
                 return .run { [offset = item?.index ?? 0] send in
                     do {
@@ -84,6 +88,21 @@ struct PokemonListFeature {
                     }
                 }
             case .path(_):
+                return .none
+            case .searchQueryChanged(let query):
+                state.query = query
+                
+                return .send(.filterQuery)
+                
+            case .filterQuery:
+                guard !state.query.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+                    state.filteredModels = state.allModels
+                
+                    return .none
+                }
+                
+                let lowercasedQuery = state.query.lowercased()
+                state.filteredModels = state.allModels.filter { $0.name.lowercased().contains(lowercasedQuery) }
                 return .none
             }
         }
@@ -98,7 +117,11 @@ struct PokemonListView: View {
     var body: some View {
         NavigationStack(path: $store.scope(state: \.path, action: \.path)) {
             List {
-                ForEach(store.models, id: \.self.name) { item in
+                TextField(text: $store.query.sending(\.searchQueryChanged)) {
+                    Text("Search:")
+                }
+                
+                ForEach(store.filteredModels, id: \.self.name) { item in
                     PokemonRow(item: item, store: store)
                 }
                 .listRowSeparator(.hidden)

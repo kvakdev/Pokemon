@@ -28,7 +28,7 @@ final class PokemonListTests: XCTestCase {
         await store.send(.onAppear)
         await store.receive(.loadAfter(nil), timeout: 1)
         await store.receive(.itemsLoaded(Pokemon.samples), timeout: 1) {
-            $0.models = Pokemon.samples
+            $0.allModels = Pokemon.samples
         }
     }
 }
