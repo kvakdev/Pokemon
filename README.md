@@ -1,16 +1,16 @@
 # Pokemon
 
 ## Test app 
-### I used The Composable Architecture to excercise and show its capabilities.
-### Fetching pokemnos from the API is done with pagination in packs of 10
-### I also implemented search withing the already fetched results
-### When tapping a Pokemon user is navigated to Details screen with some basic info about the Pokemon
-### When tapping 'Hear latest cry' button the '.ogg' file is downloaded to the device, converted to '.wav' format as iOS can't natively play the '.ogg' format, wav file is stored in the documents directory, next time it's not loaded but played from cache. The sound is weird but the browswer makes the same sound so I assume it works correctly.
-### To handle '.ogg' format I used 'OggDecoder' framework
-### The project also features several unit tests covering basic logic of navigation and loading
-### Dependency Injection is provided by the TCA framework for live, preview and test use cases.
+### 1.I used The Composable Architecture to excercise and show its capabilities.
+### 2.Fetching pokemnos from the API is done with pagination in packs of 10
+### 3.I also implemented search withing the already fetched results
+### 4.When tapping a Pokemon user is navigated to Details screen with some basic info about the Pokemon
+### 5.When tapping 'Hear latest cry' button the '.ogg' file is downloaded to the device, converted to '.wav' format as iOS can't natively play the '.ogg' format, wav file is stored in the documents directory, next time it's not loaded but played from cache. The sound is weird but the browswer makes the same sound so I assume it works correctly.
+### 6.To handle '.ogg' format I used 'OggDecoder' framework
+### 7.The project also features several unit tests covering basic logic of navigation and loading
+### 8.Dependency Injection is provided by the TCA framework for live, preview and test use cases.
 
-
+## Description of the challenge is below
 TECHNICAL TEST IOS
 To evaluate your skills and coding style, we would like you to develop a small application that
 uses https://pokeapi.co/ REST API.
