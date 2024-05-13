@@ -11,14 +11,16 @@ import XCTest
 final class RemoteClientTests: XCTestCase {
 
     func test_testClient_returnsPredefinedDetails() async throws {
-        let sut = RemoteClient()
-        let expectedDetails = try await sut.fetchTestDetails(url: URL(string: "http://any-url.com")!)
+        let sut = RemoteDetailsClient.testValue
+        let expectedDetails = try await sut.fetchDetails(URL(string: "http://any-url.com")!)
         
         XCTAssertNotNil(expectedDetails)
     }
+    
     func test_sampleJSON_isReachable() {
         let url = Bundle(for: RemoteClient.self).url(forResource: "Details", withExtension: nil)
         
         XCTAssertNotNil(url)
     }
+    
 }

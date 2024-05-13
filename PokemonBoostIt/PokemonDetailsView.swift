@@ -11,7 +11,7 @@ import OggDecoder
 import AVFoundation
 
 struct PokemonDetailsFeature: Reducer {
-    @Dependency(\.remoteClient) var client
+    @Dependency(\.remoteDetailsClient) var client
     @Dependency(\.cryLoader) var cryClient
     @Dependency(\.audioPlayer) var player
     
@@ -34,7 +34,7 @@ struct PokemonDetailsFeature: Reducer {
             case .onAppear:
                 return .run { [state] send in
                     do {
-                        let details = try await client.fetchDetails(url: state.pokemon.url)
+                        let details = try await client.fetchDetails(state.pokemon.url)
                         await send(.detailsLoaded(details))
                     } catch {
                         await send(.error(error.localizedDescription))

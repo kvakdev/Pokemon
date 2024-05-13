@@ -77,7 +77,7 @@ struct PokemonListFeature {
                 
                 return .run { [offset = item?.index ?? 0] send in
                     do {
-                        let newItems = try await remoteClient.fetchPokemons(offset: offset)
+                        let newItems = try await remoteClient.fetchPokemons(offset)
                         await send(.itemsLoaded(newItems))
                     } catch {
                         await send(.displayError("Load failed please tap to try again"))

@@ -10,6 +10,9 @@
 		CE4D4D9C2BF14EDE004D86E4 /* PokemonDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D4D9B2BF14EDE004D86E4 /* PokemonDetailsTests.swift */; };
 		CE4D4DA02BF20FD6004D86E4 /* RemoteClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D4D9F2BF20FD6004D86E4 /* RemoteClientTests.swift */; };
 		CE782A632BF220640097DC8B /* Details in Resources */ = {isa = PBXBuildFile; fileRef = CE4D4D9D2BF20B80004D86E4 /* Details */; };
+		CE782A672BF223570097DC8B /* PokemonDetailsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE782A662BF223570097DC8B /* PokemonDetailsMapper.swift */; };
+		CE782A692BF226850097DC8B /* PokemonMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE782A682BF226850097DC8B /* PokemonMapper.swift */; };
+		CE782A6B2BF228260097DC8B /* RemoteDetailsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE782A6A2BF228260097DC8B /* RemoteDetailsClient.swift */; };
 		CEEFCD0A2BEB8F430072E6BF /* PokemonBoostItApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFCD092BEB8F430072E6BF /* PokemonBoostItApp.swift */; };
 		CEEFCD0E2BEB8F470072E6BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEEFCD0D2BEB8F470072E6BF /* Assets.xcassets */; };
 		CEEFCD112BEB8F470072E6BF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEEFCD102BEB8F470072E6BF /* Preview Assets.xcassets */; };
@@ -51,6 +54,9 @@
 		CE4D4D9B2BF14EDE004D86E4 /* PokemonDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailsTests.swift; sourceTree = "<group>"; };
 		CE4D4D9D2BF20B80004D86E4 /* Details */ = {isa = PBXFileReference; lastKnownFileType = text; path = Details; sourceTree = "<group>"; };
 		CE4D4D9F2BF20FD6004D86E4 /* RemoteClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteClientTests.swift; sourceTree = "<group>"; };
+		CE782A662BF223570097DC8B /* PokemonDetailsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailsMapper.swift; sourceTree = "<group>"; };
+		CE782A682BF226850097DC8B /* PokemonMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonMapper.swift; sourceTree = "<group>"; };
+		CE782A6A2BF228260097DC8B /* RemoteDetailsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDetailsClient.swift; sourceTree = "<group>"; };
 		CEEFCD062BEB8F430072E6BF /* PokemonBoostIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonBoostIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEEFCD092BEB8F430072E6BF /* PokemonBoostItApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonBoostItApp.swift; sourceTree = "<group>"; };
 		CEEFCD0D2BEB8F470072E6BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -167,9 +173,12 @@
 			isa = PBXGroup;
 			children = (
 				CEEFCD392BEB97760072E6BF /* RemoteClient.swift */,
+				CE782A6A2BF228260097DC8B /* RemoteDetailsClient.swift */,
 				CEEFCD4C2BEEA4AF0072E6BF /* CryLoaderClient.swift */,
 				CEEFCD502BEFAED60072E6BF /* AudioPlayer.swift */,
 				CEEFCD422BEBAC2A0072E6BF /* RemotePokemonDetails.swift */,
+				CE782A662BF223570097DC8B /* PokemonDetailsMapper.swift */,
+				CE782A682BF226850097DC8B /* PokemonMapper.swift */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -329,11 +338,14 @@
 				CEEFCD372BEB8FF40072E6BF /* PokemonListView.swift in Sources */,
 				CEEFCD412BEBABAC0072E6BF /* PokemonDetailsView.swift in Sources */,
 				CEEFCD472BECE54E0072E6BF /* Pokemon+SampleData.swift in Sources */,
+				CE782A692BF226850097DC8B /* PokemonMapper.swift in Sources */,
 				CEEFCD3D2BEB97D90072E6BF /* Pokemon.swift in Sources */,
 				CEEFCD3A2BEB97760072E6BF /* RemoteClient.swift in Sources */,
 				CEEFCD4D2BEEA4AF0072E6BF /* CryLoaderClient.swift in Sources */,
+				CE782A672BF223570097DC8B /* PokemonDetailsMapper.swift in Sources */,
 				CEEFCD512BEFAED60072E6BF /* AudioPlayer.swift in Sources */,
 				CEEFCD432BEBAC2A0072E6BF /* RemotePokemonDetails.swift in Sources */,
+				CE782A6B2BF228260097DC8B /* RemoteDetailsClient.swift in Sources */,
 				CEEFCD0A2BEB8F430072E6BF /* PokemonBoostItApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
